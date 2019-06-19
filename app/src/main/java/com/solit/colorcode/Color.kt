@@ -61,9 +61,9 @@ class Color() {
         val newR = 255 - Integer.parseInt(r, 16)
         val newG = 255 - Integer.parseInt(g, 16)
         val newB = 255 - Integer.parseInt(b, 16)
-        complementaryColorCode = newString(newR, newG, newB)
         complementaryColor = android.graphics.Color.parseColor(complementaryColorCode)
 
+        oppositeColorCode = newString(newR, newG, newB)
     }
 
 
@@ -77,8 +77,8 @@ class Color() {
         val newR = p - r
         val newG = p - g
         val newB = p - b
-        oppositeColorCode = newString(newR, newG, newB)
         oppositeColor = android.graphics.Color.parseColor(oppositeColorCode)
+        complementaryColorCode = newString(newR, newG, newB)
     }
 
     fun newString(newR: Int, newG: Int, newB: Int): String {
